@@ -1,4 +1,4 @@
 export const linkStyle = {
   textDecoration: 'none',
-  color: 'green'
+  color: 'dark-teal'
 };

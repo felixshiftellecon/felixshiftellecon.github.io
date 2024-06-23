@@ -24,7 +24,7 @@ export default async function Header({ isInternalPage }: { isInternalPage?: bool
         {menu.length ? (
           <Grid
             className={clsx(
-              'mt-5 hidden gap-x-8 rounded-full bg-main-red-barn bg-opacity-20 px-5 py-2.5 text-xl font-medium uppercase text-main-red-barn lg:flex',
+              'mt-5 hidden gap-x-8 rounded-full bg-dark-teal bg-opacity-20 px-5 py-2.5 text-xl font-medium uppercase text-main-red-barn lg:flex',
               isInternalPage && 'bg-transparent pt-0'
             )}
           >

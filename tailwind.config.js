@@ -26,7 +26,8 @@ module.exports = {
         'secondary-light-blue': '#6BB9B2',
         coral: '#FFAE90',
         teal: '#C8F4DE',
-        'dark-coral': '#FF7F50'
+        'dark-coral': '#FF7F50',
+        'dark-teal': '#008080'
       },
       keyframes: {
         fadeIn: {

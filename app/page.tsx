@@ -5,7 +5,7 @@ import { getCollectionProducts } from 'lib/shopify';
 
 export const metadata = {
   title: 'Sugar Snap Pea Farm',
-  description: 'Sugar Snap Pea Farm Online Farm Stand',
+  description: 'Sugar Snap Pea Online Farm Stand',
   openGraph: {
     type: 'website'
   },
