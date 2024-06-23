@@ -16,10 +16,8 @@ export default function FeaturedCard({ product }: { product: Product }) {
         }}
       ></div>
       <div className="p-4">
-        <h2 className="font-gochi-hand text-4xl font-semibold text-main-red-barn">
-          {product.title}
-        </h2>
-        <p className="text-base leading-none text-white">
+        <h2 className="text-2xl font-semibold text-main-red-barn">{product.title}</h2>
+        <p className="text-base leading-none text-slate-500">
           {product.description.substring(0, 90)}...
         </p>
         <Button onClick={() => router.push(`/product/${product.handle}`)} className="mt-5">
