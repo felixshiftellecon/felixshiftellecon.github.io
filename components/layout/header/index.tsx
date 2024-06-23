@@ -14,7 +14,7 @@ export default async function Header({ isInternalPage }: { isInternalPage?: bool
     <header className={clsx('relative z-10 mx-auto', !isInternalPage && 'lg:pt-12')}>
       <div
         className={clsx(
-          'flex flex-col items-center justify-center pb-20',
+          'flex flex-col items-center justify-center pb-20 pl-10',
           isInternalPage && 'mb-[70px]'
         )}
       >

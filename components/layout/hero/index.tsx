@@ -6,7 +6,7 @@ import Header from '../header';
 
 const HeroContent = () => {
   return (
-    <div className="container relative z-10 mx-auto lg:pt-0">
+    <div className="container relative z-10 mx-auto pl-10 lg:pt-0">
       <div className="mx-auto flex flex-col items-center justify-between pb-10 md:flex-row">
         <Image
           src="https://i.postimg.cc/PrRQncMK/PXL-20240320-210824160.jpg"
@@ -52,7 +52,7 @@ const HeroContent = () => {
 
 const ArrowBounce = () => {
   return (
-    <div className="bg-secondary-teal absolute bottom-5 left-1/2 hidden -translate-x-1/2 animate-bounce rounded-full p-4 text-center lg:block">
+    <div className="absolute bottom-5 left-1/2 z-40 hidden -translate-x-1/2 animate-bounce rounded-full bg-secondary-light-blue p-4 text-center lg:block">
       <Arrow width="1.2rem" height="1.2rem" fill="#FFFFFF" className="rotate-90"></Arrow>
     </div>
   );
