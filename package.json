@@ -5,7 +5,10 @@
     "node": ">=18",
     "pnpm": ">=8"
   },
+  "homepage": "https://felixshiftellecon.github.io",
   "scripts": {
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d .next",
     "dev": "next dev --turbo",
     "build": "next build",
     "start": "next start",
@@ -43,6 +46,7 @@
     "eslint-config-next": "^14.2.2",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-unicorn": "^52.0.0",
+    "gh-pages": "^6.1.1",
     "lint-staged": "^15.2.2",
     "postcss": "^8.4.38",
     "prettier": "3.2.5",
