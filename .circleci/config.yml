@@ -9,7 +9,7 @@ jobs:
       # Run your project's build step
       - run: npm install && npm run build
       # Publish with wrangler
-      - run: npx wrangler pages deploy dist --project-name="sugar-snap-pea" # Replace dist with the name of your build folder and input your project name
+      - run: npx wrangler pages deploy dist --project-name="sugar-snap-pea.pages.dev" # Replace dist with the name of your build folder and input your project name
 
 workflows:
   Publish-to-Pages-workflow:
