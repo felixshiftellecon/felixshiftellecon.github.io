@@ -1,5 +1,6 @@
 import clsx from 'clsx';
 import Grid from 'components/grid';
+import { linkStyle } from 'components/link-style/link_style';
 import { getMenu } from 'lib/shopify';
 import { Menu } from 'lib/shopify/types';
 import Link from 'next/link';
@@ -13,11 +14,13 @@ export default async function Header({ isInternalPage }: { isInternalPage?: bool
     <header className={clsx('relative z-10 mx-auto', !isInternalPage && 'lg:pt-12')}>
       <div
         className={clsx(
-          'flex flex-col items-center justify-center',
-          isInternalPage && 'mb-[70px] bg-light-pink'
+          'flex flex-col items-center justify-center pb-20',
+          isInternalPage && 'mb-[70px]'
         )}
       >
-        <Link href="/">Sugar Snap Pea Farm</Link>
+        <Link style={linkStyle} href="/">
+          Sugar Snap Pea Farm
+        </Link>
         {menu.length ? (
           <Grid
             className={clsx(

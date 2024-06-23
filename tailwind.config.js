@@ -18,13 +18,15 @@ module.exports = {
     },
     extend: {
       fontFamily: {
-        sans: ['var(--font-geist-sans)'],
-        'gochi-hand': ['var(--font-gochi-hand)']
+        sans: ['Roboto'],
+        roboto: ['Roboto', 'sans-serif']
       },
       colors: {
         'main-red-barn': '#864459',
         'secondary-light-blue': '#6BB9B2',
-        'light-pink': '#FFF9FF'
+        coral: '#FFAE90',
+        teal: '#C8F4DE',
+        'dark-coral': '#FF7F50'
       },
       keyframes: {
         fadeIn: {

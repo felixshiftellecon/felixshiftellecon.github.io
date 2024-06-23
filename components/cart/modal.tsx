@@ -2,6 +2,7 @@
 
 import { Dialog, Transition } from '@headlessui/react';
 import { ShoppingCartIcon } from '@heroicons/react/24/outline';
+import { linkStyle } from 'components/link-style/link_style';
 import Price from 'components/price';
 import { DEFAULT_OPTION } from 'lib/constants';
 import type { Cart } from 'lib/shopify/types';
@@ -160,8 +161,12 @@ export default function CartModal({ cart }: { cart: Cart | undefined }) {
                       />
                     </div>
                   </div>
-                  <p>No shipping available</p>
-                  <p>Come on by to place your order</p>
+                  <p>Local purchase only</p>
+                  <p>
+                    <Link style={linkStyle} href="https://maps.app.goo.gl/2qcezohCNfxEAAYg9">
+                      Come on by the farm
+                    </Link>
+                  </p>
                 </div>
               )}
             </Dialog.Panel>

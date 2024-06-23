@@ -4,9 +4,8 @@ import Promo from 'components/layout/promo';
 import { getCollectionProducts } from 'lib/shopify';
 
 export const metadata = {
-  title: 'Free Next.js Ecommerce template using Shopify headless integration',
-  description:
-    'High-performance ecommerce store built with Next.js, Vercel, and Shopify. Clone or fork this template to build your own ecommerce store.',
+  title: 'Sugar Snap Pea Farm',
+  description: 'Sugar Snap Pea Farm Online Farm Stand',
   openGraph: {
     type: 'website'
   },

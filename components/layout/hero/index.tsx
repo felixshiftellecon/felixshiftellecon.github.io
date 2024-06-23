@@ -6,22 +6,22 @@ import Header from '../header';
 
 const HeroContent = () => {
   return (
-    <div className="container relative z-10 mx-auto max-w-[1140px] pt-10 lg:pt-0">
-      <div className="mx-auto flex flex-col items-center justify-between md:flex-row">
+    <div className="container relative z-10 mx-auto lg:pt-0">
+      <div className="mx-auto flex flex-col items-center justify-between pb-10 md:flex-row">
         <Image
           src="https://i.postimg.cc/PrRQncMK/PXL-20240320-210824160.jpg"
           width={400}
           height={520}
           alt="bee loading"
-          className="max-w-64 md:max-w-60 lg:max-w-80"
+          className=""
           priority
         />
-        <div className="flex max-w-2xl flex-col items-center  md:items-start">
-          <h2 className="text-center text-3xl font-semibold leading-tight md:text-left lg:text-5xl">
+        <div className="flex max-w-2xl flex-col items-center">
+          <h2 className="text-center text-3xl font-semibold leading-tight md:text-center lg:text-5xl">
             <p>Sugar Snap Pea</p>
             <p>Online Farm Stand</p>
           </h2>
-          <div className="mt-8 flex flex-col gap-2.5 min-[380px]:flex-row">
+          <div className="min-[380px] mt-8 flex flex-col items-center gap-2.5">
             <Link href="/products">
               <Button>Go to products</Button>
             </Link>
@@ -31,19 +31,21 @@ const HeroContent = () => {
           src="https://i.postimg.cc/rmspThjC/bee-beard.jpg"
           width={400}
           height={520}
-          alt="Cake"
-          className="max-w-64 md:max-w-60 lg:max-w-80"
+          alt="bee beard"
+          className=""
           priority
         />
       </div>
-      <Image
-        src="https://i.postimg.cc/pd6mmbp1/rail-chicken.jpg"
-        width={400}
-        height={520}
-        alt="Cake"
-        className="max-w-64 md:max-w-60 lg:max-w-80"
-        priority
-      />
+      <div className="flex flex-col items-center pt-10">
+        <Image
+          src="https://i.postimg.cc/pd6mmbp1/rail-chicken.jpg"
+          width={1000}
+          height={1120}
+          alt="rail chickens"
+          className=""
+          priority
+        />
+      </div>
     </div>
   );
 };
@@ -58,8 +60,8 @@ const ArrowBounce = () => {
 
 export default function Hero() {
   return (
-    <section className="relative mx-auto overflow-hidden bg-light-pink px-2.5 pb-10 lg:h-[100vh] lg:pb-0">
-      <div className="absolute bottom-0 left-0 right-0 top-0 m-auto h-4/6 w-1/4 rounded-full bg-white opacity-60 blur-xl"></div>
+    <section className="relative mx-auto overflow-hidden bg-teal px-2.5 pb-10 lg:h-[100vh] lg:pb-0">
+      <div className="absolute bottom-0 left-0 right-0 top-0 m-auto h-4/6 w-1/4 rounded-full opacity-60 blur-xl"></div>
       <Header />
       <HeroContent />
       <ArrowBounce />
