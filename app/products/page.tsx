@@ -6,9 +6,8 @@ import { defaultSort, sorting } from 'lib/constants';
 import { getProducts } from 'lib/shopify';
 
 export const metadata = {
-  title: 'Free Next.js Ecommerce template using Shopify headless integration',
-  description:
-    'Products page for the ecommerce store. Clone or fork this template to build your own ecommerce store with Next.js, Vercel, and Shopify.'
+  title: 'Sugar Snap Pea Farm',
+  description: 'Sugar Snap Pea Farm Online Farmstand'
 };
 
 export default async function ProductsPage({
