@@ -15,7 +15,7 @@ export default function Promo() {
         <Grid className="flex flex-col">
           <Grid.Item className="mb-5 flex items-center">
             <FaEgg size={50} style={iconStyle} className="mr-2.5 w-10" />
-            Free range chickens
+            Pasture raised chickens
           </Grid.Item>
           <Grid.Item className="mb-5 flex items-center">
             <LuWheat size={50} style={iconStyle} className=" mr-2.5 w-10" />
