@@ -1,9 +1,16 @@
 import clsx from 'clsx';
 import Grid from 'components/grid';
-import { linkStyle } from 'components/link-style/link_style';
 import { getMenu } from 'lib/shopify';
 import { Menu } from 'lib/shopify/types';
 import Link from 'next/link';
+// @ts-ignore
+const ImageLink = ({ src, href }) => {
+  return (
+    <a href={href}>
+      <img src={src} alt="Sugar Snap Pea Farm" />
+    </a>
+  );
+};
 
 export default async function Header({ isInternalPage }: { isInternalPage?: boolean }) {
   // Get menu from shopify
@@ -18,9 +25,7 @@ export default async function Header({ isInternalPage }: { isInternalPage?: bool
           isInternalPage && 'mb-[70px]'
         )}
       >
-        <Link style={linkStyle} href="/">
-          Sugar Snap Pea Farm
-        </Link>
+        <ImageLink src="https://postimg.cc/fJjPqBZm" href="/" />
         {menu.length ? (
           <Grid
             className={clsx(
