@@ -7,7 +7,7 @@ import { Product } from 'lib/shopify/types';
 export default function Featuredproducts({ products }: { products: Product[] }) {
   return (
     <>
-      <section className="container mx-auto my-[70px] max-w-[1140px] pl-12">
+      <section className="container mx-auto my-[70px] max-w-[1140px] bg-teal pl-12">
         <div className="px-2.5">
           <h2 className="mb-2.5 pb-5 text-center text-header-2 font-semibold leading-none">
             Featured Products

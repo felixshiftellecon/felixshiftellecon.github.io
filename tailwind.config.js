@@ -26,7 +26,7 @@ module.exports = {
         'secondary-light-blue': '#6BB9B2',
         coral: '#FFAE90',
         teal: '#CBF2F0',
-        'dark-coral': '#FF7F50',
+        'dark-coral': '#F59F98',
         'dark-teal': '#008080'
       },
       keyframes: {
