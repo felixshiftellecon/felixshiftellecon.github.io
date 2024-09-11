@@ -25,7 +25,7 @@ export default async function Header({ isInternalPage }: { isInternalPage?: bool
           isInternalPage && 'mb-[70px]'
         )}
       >
-        <ImageLink src="https://postimg.cc/fJjPqBZm" href="/" />
+        <ImageLink src="https://i.postimg.cc/rFvLmPPn/SSP-Farm-Logo-22.png" href="/" />
         {menu.length ? (
           <Grid
             className={clsx(
