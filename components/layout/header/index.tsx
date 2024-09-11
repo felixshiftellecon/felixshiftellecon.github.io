@@ -1,12 +1,9 @@
 import clsx from 'clsx';
 import Grid from 'components/grid';
+import { linkStyle } from 'components/link-style/link_style';
 import { getMenu } from 'lib/shopify';
 import { Menu } from 'lib/shopify/types';
 import Link from 'next/link';
-
-const link = () => {
-  window.location.href = 'www.sugarsnappeafarm.com';
-};
 
 export default async function Header({ isInternalPage }: { isInternalPage?: boolean }) {
   // Get menu from shopify
@@ -21,15 +18,9 @@ export default async function Header({ isInternalPage }: { isInternalPage?: bool
           isInternalPage && 'mb-[70px]'
         )}
       >
-        <div className="">
-          <img
-            alt="Sugar Snap Pea Farm"
-            onClick={link}
-            src="https://postimg.cc/fJjPqBZm"
-            width={500}
-            height={500}
-          />
-        </div>
+        <Link style={linkStyle} href="/">
+          Sugar Snap Pea Farm
+        </Link>
         {menu.length ? (
           <Grid
             className={clsx(
