@@ -7,7 +7,7 @@ import Link from 'next/link';
 const ImageLink = ({ src, href }) => {
   return (
     <a href={href}>
-      <img src={src} alt="Sugar Snap Pea Farm" height={500} width={500} />
+      <img src={src} alt="Sugar Snap Pea Farm" height={100} width={100} />
     </a>
   );
 };
