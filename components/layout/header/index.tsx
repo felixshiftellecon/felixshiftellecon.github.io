@@ -21,7 +21,7 @@ export default async function Header({ isInternalPage }: { isInternalPage?: bool
           isInternalPage && 'mb-[70px]'
         )}
       >
-        <div className="bottom absolute">
+        <div className="">
           <img
             alt="Sugar Snap Pea Farm"
             onClick={link}
