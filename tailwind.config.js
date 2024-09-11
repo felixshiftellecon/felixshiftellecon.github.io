@@ -24,7 +24,7 @@ module.exports = {
       colors: {
         'main-red-barn': '#864459',
         'secondary-light-blue': '#6BB9B2',
-        coral: '#FFAE90',
+        coral: '#F59F98',
         teal: '#CBF2F0',
         'dark-coral': '#FF7F50',
         'dark-teal': '#008080'
