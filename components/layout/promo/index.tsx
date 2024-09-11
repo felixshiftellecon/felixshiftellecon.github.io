@@ -9,7 +9,7 @@ const iconStyle = { color: 'teal' };
 
 export default function Promo() {
   return (
-    <section className="text-lg container mx-auto my-[70px] flex max-w-[1140px] items-center justify-between px-2.5">
+    <section className="text-lg container mx-auto my-[70px] flex max-w-[1140px] items-center justify-between bg-teal px-2.5">
       <div>
         <h2 className="mb-8 text-header-2 font-semibold leading-none">Locally Farmed Products</h2>
         <Grid className="flex flex-col">
