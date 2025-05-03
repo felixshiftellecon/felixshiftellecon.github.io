@@ -286,9 +286,9 @@ export default function PollinatorsPage(): React.ReactNode {
 
         <div className="mx-auto mb-8 max-w-4xl">
           <p className="mb-4">
-            As Master Naturalists, we at Sugar Snap Pea Farm believe in natural farming practices
-            that support and nurture our local ecosystem. Native pollinators play a crucial role in
-            this system, helping to pollinate our native plants and maintain biodiversity.
+            As naturalists, we at Sugar Snap Pea Farm believe in natural farming practices that
+            support and nurture our local ecosystem. Native pollinators play a crucial role in this
+            system, helping to pollinate our native plants and maintain biodiversity.
           </p>
           <p className="mb-4">
             Maryland is home to over{' '}
