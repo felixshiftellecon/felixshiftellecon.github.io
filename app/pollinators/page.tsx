@@ -1,4 +1,5 @@
 // app/pollinators/page.tsx
+import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
 
@@ -233,7 +234,7 @@ const pollinators: Pollinator[] = [
   }
 ];
 
-const pollinatorImages = {
+const pollinatorImages: Record<string, string> = {
   'Eastern Carpenter Bee':
     'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.TbI60Wm7d8G3HWtHzmhDdAHaFw%26pid%3DApi&f=1&ipt=3c11205b41422e942aa09eb041aa720fb706f93b4248ad017e59fc0f589b0e55',
   'Squash Bee':
@@ -254,7 +255,7 @@ const pollinatorImages = {
     'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcarolinahoneybees.com%2Fwp-content%2Fuploads%2F2022%2F11%2Fvisual-looks-honey-bee.jpg&f=1&nofb=1&ipt=d2fba2c164ddc15b84444cef67b33e9ff8d20c888fc8f5f5097f7db294a32b0b'
 };
 
-const flowerImages = {
+const flowerImages: Record<string, string> = {
   Tomatoes:
     'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimg-aws.ehowcdn.com%2F877x500p%2Fphotos.demandstudios.com%2F25%2F135%2Ffotolia_3817158_XS.jpg&f=1&nofb=1&ipt=a17bac88d46f716439c062a7cc3c06eddb2505368b2278c3eaeb9accc40871dc',
   Pumpkins:
@@ -273,6 +274,14 @@ const flowerImages = {
     'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fdirectnativeplants.com%2Fwp-content%2Fuploads%2F2018%2F08%2Fblueberry2-1-768x576.jpg&f=1&nofb=1&ipt=860b2bc2e432bf9e07c58331acbc3a12c1ad6f1fad4e6c6cd441e7493282d9f5',
   Clover:
     'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fobjects.liquidweb.services%2Fimages%2F201906%2Fdavid_illig_47960396171_2b81da58f0_b.jpg&f=1&nofb=1&ipt=f5d0cf70c1ad8958255608fd6f6102e140a848eac1a40e3666608c15258e1db1'
+};
+
+// Helper function to determine the image source
+const getFlowerImageSrc = (flowerName: string | undefined): string => {
+  if (!flowerName) return '/placeholder-flower.jpg';
+
+  const imageSrc = flowerImages[flowerName];
+  return imageSrc || '/placeholder-flower.jpg';
 };
 
 export default function PollinatorsPage(): React.ReactNode {
@@ -370,13 +379,16 @@ function PollinatorCard({ pollinator }: { pollinator: Pollinator }): React.React
           </div>
         </div>
 
-        {/* Anatomical Diagram - Full Width */}
+        {/* Insect Image - Full Width */}
         <div className="mb-4 w-full overflow-hidden rounded-lg border bg-white shadow-sm">
-          <div className="aspect-[16/9] w-full overflow-hidden">
-            <img
+          <div className="relative aspect-[16/9] w-full overflow-hidden">
+            <Image
               src={pollinatorImages[title] || '/placeholder-image.jpg'}
               alt={`${title} diagram`}
-              className="h-full w-full object-cover"
+              fill
+              sizes="100vw"
+              style={{ objectFit: 'cover' }}
+              unoptimized
             />
           </div>
         </div>
@@ -411,9 +423,13 @@ function PollinatorCard({ pollinator }: { pollinator: Pollinator }): React.React
             </h3>
             <div className="flex h-24 flex-col items-center justify-center text-center">
               <img
-                src={flowerImages[flowers[0]] || '/placeholder-image.jpg'}
-                alt={`${flowers[0]}`}
-                className="h-full w-full object-cover"
+                src={
+                  flowers[0] && flowerImages[flowers[0]]
+                    ? flowerImages[flowers[0]]
+                    : '/placeholder-flower.jpg'
+                }
+                alt={flowers[0] || 'Flower'}
+                className="h-full w-full object-contain"
               />
             </div>
           </div>
