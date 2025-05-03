@@ -6,6 +6,7 @@ module.exports = {
   },
   images: {
     formats: ['image/avif', 'image/webp'],
+    unoptimized: true,
     remotePatterns: [
       {
         protocol: 'https',
@@ -13,7 +14,9 @@ module.exports = {
         pathname: '/s/files/**'
       },
       {
-        hostname: 'i.postimg.cc'
+        protocol: 'https',
+        hostname: 'i.postimg.cc',
+        pathname: '/**'
       }
     ]
   },
