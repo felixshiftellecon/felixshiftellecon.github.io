@@ -329,7 +329,7 @@ export default function PollinatorsPage(): React.ReactNode {
             href="/about"
             className="rounded-md bg-main-red-barn px-6 py-2 text-white transition-colors duration-300 hover:bg-main-red-barn"
           >
-            Contact Us For Tips
+            Give us a call
           </Link>
         </div>
       </div>

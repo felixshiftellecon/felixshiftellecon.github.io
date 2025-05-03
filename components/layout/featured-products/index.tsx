@@ -7,9 +7,9 @@ import { Product } from 'lib/shopify/types';
 export default function Featuredproducts({ products }: { products: Product[] }) {
   return (
     <>
-      <section className="container mx-auto my-[70px] max-w-[1140px] bg-teal pl-12">
+      <section className="container mx-auto my-[140px] max-w-[1140px] bg-teal px-4">
         <div className="px-2.5">
-          <h2 className="mb-2.5 pb-5 text-center text-header-2 font-semibold leading-none">
+          <h2 className="mb-2.5 pb-5 text-center text-header-2 font-semibold leading-none text-main-red-barn">
             Featured Products
           </h2>
           <h3 className="mx-auto max-w-3xl text-center text-header-3 leading-none">
@@ -20,7 +20,7 @@ export default function Featuredproducts({ products }: { products: Product[] }) 
             <p>No items will be shipped</p>
           </h3>
         </div>
-        <CustomCarousel className="mt-12 pl-2.5">
+        <CustomCarousel className="mt-12 flex justify-center pl-2.5">
           {products?.map((product: Product) => <FeaturedCard key={product.id} product={product} />)}
         </CustomCarousel>
       </section>

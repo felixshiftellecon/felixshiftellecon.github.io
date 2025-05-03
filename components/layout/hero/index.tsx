@@ -6,20 +6,26 @@ import Header from '../header';
 
 const HeroContent = () => {
   return (
-    <div className="container relative z-10 mx-auto pl-10 lg:pt-0">
-      <div className="mx-auto flex flex-col items-center justify-between pb-10 md:flex-row">
+    <div className="container relative z-0 mx-auto">
+      <div className="mx-auto flex flex-col items-center justify-between md:flex-row">
         <Image
           src="https://i.postimg.cc/PrRQncMK/PXL-20240320-210824160.jpg"
-          width={400}
-          height={520}
+          width={500}
+          height={650}
           alt="bee loading"
-          className=""
+          className="w-1/3 flex-shrink-0"
           priority
         />
-        <div className="flex max-w-2xl flex-col items-center">
-          <h2 className="text-center text-3xl font-semibold leading-tight md:text-center lg:text-5xl">
-            <p>Sugar Snap Pea</p>
-            <p>Online Farm Stand</p>
+
+        <div className="mx-4 flex flex-grow flex-col items-center justify-center">
+          <h2 className="text-center text-3xl font-semibold leading-tight text-main-red-barn md:text-center lg:text-5xl">
+            Sugar Snap Pea
+          </h2>
+          <h2 className="text-center text-3xl font-semibold leading-tight text-main-red-barn md:text-center lg:text-5xl">
+            Online
+          </h2>
+          <h2 className="text-center text-3xl font-semibold leading-tight text-main-red-barn md:text-center lg:text-5xl">
+            Farm Stand
           </h2>
           <div className="min-[380px] mt-8 flex flex-col items-center gap-2.5">
             <Link href="/products">
@@ -27,22 +33,24 @@ const HeroContent = () => {
             </Link>
           </div>
         </div>
+
         <Image
           src="https://i.postimg.cc/rmspThjC/bee-beard.jpg"
-          width={400}
-          height={520}
+          width={500}
+          height={650}
           alt="bee beard"
-          className=""
+          className="w-1/3 flex-shrink-0"
           priority
         />
       </div>
-      <div className="flex flex-col items-center pt-10">
+
+      <div className="relative z-0 mb-20 flex flex-col items-center pt-10">
         <Image
           src="https://i.postimg.cc/pd6mmbp1/rail-chicken.jpg"
           width={1000}
-          height={1120}
+          height={750}
           alt="rail chickens"
-          className=""
+          className="h-auto w-full"
           priority
         />
       </div>
@@ -60,7 +68,7 @@ const ArrowBounce = () => {
 
 export default function Hero() {
   return (
-    <section className="relative mx-auto overflow-hidden bg-teal px-2.5 pb-10 lg:h-[100vh] lg:pb-0">
+    <section className="container relative z-10 mx-auto mt-4 max-w-[1140px] bg-teal px-4">
       <div className="absolute bottom-0 left-0 right-0 top-0 m-auto h-4/6 w-1/4 rounded-full opacity-60 blur-xl"></div>
       <Header />
       <HeroContent />

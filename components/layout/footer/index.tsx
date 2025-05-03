@@ -12,7 +12,7 @@ export default function Footer() {
         </a>
         <br></br>
         <p>
-          <a href="tel:2404068117">(240) 406-8117</a>
+          <a href="tel:5402219408">(540) 221-9408</a>
         </p>
         <br></br>
         <p>

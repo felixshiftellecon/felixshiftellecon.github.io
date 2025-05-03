@@ -23,7 +23,9 @@ export default async function ContactPage() {
           priority
         />
       </div>
-      <h2 className="mb-8 text-header-2 font-semibold leading-none">Come on by!</h2>
+      <h2 className="mb-8 text-header-2 font-semibold leading-none text-main-red-barn">
+        Come on by!
+      </h2>
       <p className="leading-7">
         Want to buy something or checkout our farm?
         <br></br>
@@ -53,7 +55,7 @@ export default async function ContactPage() {
         </a>
         <br></br>
         <p>
-          <a href="tel:2404068117">(540) 221-9408</a>
+          <a href="tel:5402219408">(540) 221-9408</a>
         </p>
         <br></br>
         <p>
@@ -65,7 +67,7 @@ export default async function ContactPage() {
 
   return (
     <>
-      <h1 className="mb-8 text-center text-5xl font-bold">About Us</h1>
+      <h1 className="mb-8 text-center text-5xl font-bold text-main-red-barn">About Us</h1>
       <Prose className="mb-[70px]" html={page.body as string} />
       <GoogleMapEmbed />
     </>
