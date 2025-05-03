@@ -18,6 +18,7 @@ interface Pollinator {
 
 interface DownloadButtonsProps {
   pollinator: Pollinator;
+  cardId?: string; // Make it optional to maintain backward compatibility
 }
 
 export default function PdfDownloadButtons({ pollinator }: DownloadButtonsProps) {
