@@ -27,15 +27,15 @@ const pollinators: Pollinator[] = [
     subtitle: 'Xylocopa virginica',
     identification: [
       'Large bee (3/4 to 1 inch long)',
-      'Shiny black, hairless abdomen',
-      'Yellow fuzzy thorax (middle section)',
+      'Shiny black, hairless abdomen, unlike bumblebees',
+      'Sawdust piles below perfectly circular holes drilled into wood surfaces',
       'Males have white facial markings'
     ],
     flowers: ['Tomatoes', 'Blueberries', 'Sunflowers', 'Wild bergamot', 'Goldenrod'],
     ecological: [
       'Creates nest holes in wood that can later be used by other wildlife',
       'Helps break down dead and decaying wood',
-      'Serves as food for birds and other predators'
+      'Very long pollination season'
     ],
     habitat: [
       'Nests in softwood by drilling perfectly circular tunnels',
@@ -49,8 +49,8 @@ const pollinators: Pollinator[] = [
     subtitle: 'Vespula maculifrons',
     identification: [
       'Medium-sized (1/2 inch) black and yellow wasp',
-      'Has anchor-shaped black marking on first abdominal segment',
-      'Black bands are flat on top and wavy on bottom',
+      'Has thicker black bands than other yellowjackets',
+      'Color patterns differ between queens, workers, and males',
       'Smooth, not fuzzy body'
     ],
     flowers: ['Goldenrod', 'Asters', 'Late summer wildflowers', "Queen Anne's lace", 'Fruit trees'],
@@ -62,7 +62,7 @@ const pollinators: Pollinator[] = [
     habitat: [
       'Typically nests underground in abandoned rodent burrows',
       'Common in forests, meadows, gardens, and parks',
-      'Found throughout eastern Maryland'
+      'Found throughout Maryland'
     ],
     color: '#B8860B' // DarkGoldenrod
   },
@@ -73,7 +73,7 @@ const pollinators: Pollinator[] = [
       'Queens are larger and more orange in color',
       'Workers have distinctive yellow stripes on the upper thorax',
       'Slightly larger than Eastern yellowjackets',
-      'Black and yellow striped pattern on entire body'
+      'Has thin black bands'
     ],
     flowers: ['Late wildflowers', 'Goldenrod', 'Asters', 'Fruit trees', 'Garden crops'],
     ecological: [
@@ -84,7 +84,7 @@ const pollinators: Pollinator[] = [
     habitat: [
       'Typically builds nests underground',
       'Often found in disturbed areas like yards, parks, and roadsides',
-      'Prefers warmer climates, common in southern Maryland'
+      'Prefers warmer climates, common in eastern Maryland'
     ],
     color: '#B8860B' // DarkGoldenrod
   },
@@ -115,7 +115,7 @@ const pollinators: Pollinator[] = [
     subtitle: 'Family Halictidae',
     identification: [
       'Small bees (1/4 to 1/2 inch)',
-      'Many species have metallic green or blue bodies',
+      'Many species have metallic green red, purple, or blue bodies',
       'Some species are black with yellow markings',
       'Attracted to human sweat for the salt'
     ],
@@ -134,7 +134,7 @@ const pollinators: Pollinator[] = [
   },
   {
     title: 'Squash Bee',
-    subtitle: 'Peponapis pruinosa',
+    subtitle: 'Subgenus Peponapis',
     identification: [
       'Medium-sized bee (about 1/2 inch)',
       'Black and yellow striped abdomen',
@@ -150,13 +150,13 @@ const pollinators: Pollinator[] = [
     habitat: [
       'Nests in the ground, often right under squash plants',
       'Active very early in the morning when squash flowers open',
-      'Found wherever squash plants are grown in Maryland'
+      'Prefer non-tilled soil, tilling can hurt them'
     ],
     color: '#A0522D' // Sienna
   },
   {
     title: 'Mining Bee',
-    subtitle: 'Family Andrenidae',
+    subtitle: 'Genus Andrena',
     identification: [
       'Small to medium-sized bees (1/4 to 1/2 inch)',
       'Usually dark colored (black or reddish)',
@@ -173,7 +173,7 @@ const pollinators: Pollinator[] = [
     ecological: [
       'Aerates soil through nest building',
       'Creates habitat for other insects',
-      'First bees active in early spring, supporting early ecosystem awakening'
+      'First bees active in early spring, only active for a few weeks'
     ],
     habitat: [
       'Nests in the ground in sandy or well-drained soils',
@@ -199,14 +199,14 @@ const pollinators: Pollinator[] = [
       'Berry plants'
     ],
     ecological: [
-      'Extremely efficient pollinators (better than honey bees for many crops)',
+      'Extremely efficient pollinators (better than honey bees)',
       'Creates habitat for other insects in abandoned nests',
       'Helps decompose dead plant material'
     ],
     habitat: [
       'Nests in hollow reeds, stems, or existing holes in wood',
       'Does not drill holes but uses pre-existing cavities',
-      'Found in gardens, orchards, and natural areas across Maryland'
+      'Uses mud or other "masonry" products in nest construction'
     ],
     color: '#4682B4' // SteelBlue
   },
@@ -274,6 +274,27 @@ const flowerImages: Record<string, string> = {
     'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fdirectnativeplants.com%2Fwp-content%2Fuploads%2F2018%2F08%2Fblueberry2-1-768x576.jpg&f=1&nofb=1&ipt=860b2bc2e432bf9e07c58331acbc3a12c1ad6f1fad4e6c6cd441e7493282d9f5',
   Clover:
     'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fobjects.liquidweb.services%2Fimages%2F201906%2Fdavid_illig_47960396171_2b81da58f0_b.jpg&f=1&nofb=1&ipt=f5d0cf70c1ad8958255608fd6f6102e140a848eac1a40e3666608c15258e1db1'
+};
+
+// Helper function to get information URL based on scientific name
+const getPollinatorInfoURL = (scientificName: string): string => {
+  const infoURLs: Record<string, string> = {
+    'Xylocopa virginica': 'https://www.inaturalist.org/taxa/51110-Xylocopa-virginica',
+    'Vespula maculifrons': 'https://www.inaturalist.org/taxa/119994-Vespula-maculifrons',
+    'Vespula squamosa': 'https://www.inaturalist.org/taxa/233560-Vespula-squamosa',
+    'Dolichovespula maculata': 'https://www.inaturalist.org/taxa/52911-Dolichovespula-maculata',
+    'Family Halictidae': 'https://www.inaturalist.org/taxa/49707-Halictidae',
+    'Subgenus Peponapis': 'https://www.inaturalist.org/taxa/578138-Peponapis',
+    'Genus Andrena': 'https://www.inaturalist.org/taxa/57669-Andrena',
+    'Genus Osmia': 'https://www.inaturalist.org/taxa/57674-Osmia',
+    'Apis mellifera (Non-native)': 'https://www.inaturalist.org/taxa/47219-Apis-mellifera'
+  };
+
+  // Return the URL if found, or a default search URL if not found
+  return (
+    infoURLs[scientificName] ||
+    `https://www.inaturalist.org/search?q=${encodeURIComponent(scientificName)}`
+  );
 };
 
 export default function PollinatorsPage(): React.ReactNode {
@@ -351,7 +372,14 @@ function PollinatorCard({ pollinator }: { pollinator: Pollinator }): React.React
       {/* Header */}
       <div className="px-3 py-4 text-center text-white" style={{ backgroundColor: color }}>
         <h2 className="text-xl font-bold">{title}</h2>
-        <p className="text-sm italic">{subtitle}</p>
+        <a
+          href={getPollinatorInfoURL(subtitle)}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-sm italic underline transition-colors hover:text-gray-200"
+        >
+          {subtitle}
+        </a>
       </div>
 
       {/* Body */}
