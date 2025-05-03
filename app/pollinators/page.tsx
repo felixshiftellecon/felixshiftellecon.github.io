@@ -55,7 +55,7 @@ export default function PollinatorsPage(): React.ReactNode {
           <p className="mb-6">
             Below you&apos;ll find information about some of the key pollinators you might see
             around Maryland. Each card provides details about the pollinator&apos;s identifying
-            features, habitat, ecological importance, and the flowers they pollinate. Use this guide
+            features, ecological importance, habitat, and the flowers they pollinate. Use this guide
             to help identify these beneficial insects on your expedition into the natural world!
           </p>
         </div>
