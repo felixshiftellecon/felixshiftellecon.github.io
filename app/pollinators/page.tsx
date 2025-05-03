@@ -276,27 +276,19 @@ const flowerImages: Record<string, string> = {
     'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fobjects.liquidweb.services%2Fimages%2F201906%2Fdavid_illig_47960396171_2b81da58f0_b.jpg&f=1&nofb=1&ipt=f5d0cf70c1ad8958255608fd6f6102e140a848eac1a40e3666608c15258e1db1'
 };
 
-// Helper function to determine the image source
-const getFlowerImageSrc = (flowerName: string | undefined): string => {
-  if (!flowerName) return '/placeholder-flower.jpg';
-
-  const imageSrc = flowerImages[flowerName];
-  return imageSrc || '/placeholder-flower.jpg';
-};
-
 export default function PollinatorsPage(): React.ReactNode {
   return (
     <div className="min-h-screen">
-      <div className="container mx-auto px-4 py-8">
-        <h1 className="mb-6 text-center text-3xl font-bold text-amber-900">
+      <div className="container mx-auto px-4">
+        <h1 className="mb-6 text-center text-3xl font-bold text-main-red-barn">
           Maryland Native Pollinators
         </h1>
 
         <div className="mx-auto mb-8 max-w-4xl">
           <p className="mb-4">
-            At Sugar Snap Pea Farm, we believe in sustainable farming practices that support and
-            nurture our local ecosystem. Native pollinators play a crucial role in this system,
-            helping to pollinate our native plants and maintain biodiversity.
+            As Master Naturalists, we at Sugar Snap Pea Farm believe in natural farming practices
+            that support and nurture our local ecosystem. Native pollinators play a crucial role in
+            this system, helping to pollinate our native plants and maintain biodiversity.
           </p>
           <p className="mb-4">
             Maryland is home to over{' '}
@@ -312,27 +304,30 @@ export default function PollinatorsPage(): React.ReactNode {
           </p>
           <p className="mb-6">
             Below you&apos;ll find information about some of the key pollinators you might see
-            around our farm. Each card provides details about the pollinator&apos;s identifying
+            around Maryland. Each card provides details about the pollinator&apos;s identifying
             features, habitat, ecological importance, and the flowers they pollinate. Use this guide
-            to help identify these beneficial insects on your foray into the natural world!
+            to help identify these beneficial insects on your expedition into the natural world!
           </p>
         </div>
 
         {/* Pollinator Cards Grid */}
         <div className="mb-12 grid grid-cols-1 gap-8 md:grid-cols-2">
           {pollinators.map((pollinator, index) => (
-            <PollinatorCard key={index} pollinator={pollinator} />
+            <div key={index} className="flex h-full">
+              <PollinatorCard pollinator={pollinator} />
+            </div>
           ))}
         </div>
 
         <div className="mt-12 text-center">
-          <p className="text-lg mb-4 text-amber-900">
-            Want to learn more about supporting pollinators on your property? Do you have a swarm
-            you need help with?
+          <p className="text-lg mb-4">
+            Want to learn more about supporting pollinators on your property?
+            <br />
+            Do you have a swarm you need help with?
           </p>
           <Link
-            href="/contact"
-            className="rounded-md bg-amber-800 px-6 py-2 text-white transition-colors duration-300 hover:bg-amber-900"
+            href="/about"
+            className="rounded-md bg-main-red-barn px-6 py-2 text-white transition-colors duration-300 hover:bg-main-red-barn"
           >
             Contact Us For Tips
           </Link>
@@ -360,7 +355,7 @@ function PollinatorCard({ pollinator }: { pollinator: Pollinator }): React.React
       </div>
 
       {/* Body */}
-      <div className="p-4" style={{ backgroundColor: getLighterColor() }}>
+      <div className="h-full p-4" style={{ backgroundColor: getLighterColor() }}>
         {/* Identification Section */}
         <div className="mb-4 w-full rounded-lg border bg-white p-3 shadow-sm">
           <h3 className="mb-2 border-b pb-1 text-center font-semibold" style={{ color: color }}>
