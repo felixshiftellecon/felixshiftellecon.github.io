@@ -7,7 +7,7 @@ import Link from 'next/link';
 const ImageLink = ({ src, href }) => {
   return (
     <a href={href}>
-      <img src={src} alt="Sugar Snap Pea Farm" height={200} width={200} />
+      <img src={src} alt="Sugar Snap Pea Farm" height={300} width={300} />
     </a>
   );
 };
@@ -21,11 +21,11 @@ export default async function Header({ isInternalPage }: { isInternalPage?: bool
     <header className={clsx('relative z-10 mx-auto', !isInternalPage && 'lg:pt-12')}>
       <div
         className={clsx(
-          'flex flex-col items-center justify-center px-4 pb-20',
+          'flex flex-col items-center justify-center px-4 pb-10',
           isInternalPage && 'mb-[70px]'
         )}
       >
-        <ImageLink src="https://i.postimg.cc/rFvLmPPn/SSP-Farm-Logo-22.png" href="/" />
+        <ImageLink src="https://i.postimg.cc/W1FybQdQ/SSP-Farm-Logo-dark.png" href="/" />
         {menu.length ? (
           <Grid
             className={clsx(

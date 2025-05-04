@@ -29,10 +29,12 @@ export default async function ContactPage() {
       <p className="leading-7">
         Want to buy something or checkout our farm?
         <br></br>
+        Have a swarm you need help with?
+        <br></br>
         We&apos;re happy to meet you!
         <br></br>
         Feel free to give us a call at{' '}
-        <a style={linkStyle} href="tel:2404068117">
+        <a style={linkStyle} href="tel:5402219408">
           (540) 221-9408
         </a>
       </p>

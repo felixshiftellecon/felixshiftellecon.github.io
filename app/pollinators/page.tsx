@@ -58,6 +58,11 @@ export default function PollinatorsPage(): React.ReactNode {
             features, ecological importance, habitat, and the flowers they pollinate. Use this guide
             to help identify these beneficial insects on your expedition into the natural world!
           </p>
+          <p className="mb-6 text-center" style={{ fontWeight: 'bold' }}>
+            Click the scientific name for more pictures and information about each pollinator.
+            <br></br>
+            Each card has an 8x11 PDF that can be downloaded via the button on the card.
+          </p>
         </div>
 
         {/* Pollinator Cards Grid */}

@@ -201,7 +201,7 @@ export default function PdfDownloadButtons({ pollinator }: DownloadButtonsProps)
         const logoY = headerCenterY - logoHeight / 2; // Center vertically in header
 
         // Use the external logo image URL directly
-        const logoUrl = 'https://i.postimg.cc/rFvLmPPn/SSP-Farm-Logo-22.png';
+        const logoUrl = 'https://i.postimg.cc/W1FybQdQ/SSP-Farm-Logo-dark.png';
 
         // Get logo as base64
         const logoBase64 = await getBase64FromUrl(logoUrl);
