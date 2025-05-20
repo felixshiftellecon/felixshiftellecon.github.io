@@ -152,7 +152,7 @@ function PollinatorCard({
           <div className="relative aspect-[16/9] w-full overflow-hidden">
             <Image
               src={pollinatorImages[title] || '/placeholder-image.jpg'}
-              alt={`${title} diagram`}
+              alt={`${title} picture`}
               fill
               sizes="100vw"
               style={{ objectFit: 'cover' }}

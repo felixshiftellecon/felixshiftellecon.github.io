@@ -1,4 +1,52 @@
 // data/pollinators.ts
+
+// Templates
+
+// Pollinator Data
+
+// {
+//   title: 'xxx',
+//   subtitle: 'xxx',
+//   identification: [
+//     'xxx',
+//     'xxx',
+//     'xxx',
+//     'xxx'
+//   ],
+//   flowers: [
+//     'xxx',
+//     'xxx',
+//     'xxx',
+//     'xxx',
+//     'xxx'
+//   ],
+//   ecological: [
+//     'xxx',
+//     'xxx',
+//     'xxx'
+//   ],
+//   habitat: [
+//     'xxx',
+//     'xxx',
+//     'xxx'
+//   ],
+//   color: 'xxx'
+// }
+
+// Bee Pic
+
+// 'xxx':
+//   'xxx'
+
+// Flowers Pic
+
+// xxx:
+//   'xxxx'
+
+// iNaturalist Link
+
+// 'xxx': 'xxx',
+
 export const pollinators = [
   {
     title: 'Eastern Carpenter Bee',
@@ -23,6 +71,28 @@ export const pollinators = [
     color: '#8B4513' // SaddleBrown
   },
   {
+    title: 'Rusty-patched Bumble Bee',
+    subtitle: 'Bombus affinis',
+    identification: [
+      'Rusty colored patch on mostly yellow abdomen',
+      'Thumb tack shaped black spot between wings',
+      'Mostly yellow thorax with black rear',
+      'Queens do not have rusty patch'
+    ],
+    flowers: ['New Jersey tea', 'Milkweed', 'Purple prairie clover', 'Jewelweed', 'Asters'],
+    ecological: [
+      'Primary pollinators apples, alfalfa, and much more',
+      'One of the most efficient natural pollinators',
+      'Long pollination period, can withstand cold and see in low light'
+    ],
+    habitat: [
+      'Nests underground, prefers soft soil',
+      'Uses grass in nests, grasslands are important',
+      'Little is know about hibernation habits'
+    ],
+    color: '#A65E2E' // Rust Brown
+  },
+  {
     title: 'Eastern Yellowjacket',
     subtitle: 'Vespula maculifrons',
     identification: [
@@ -42,7 +112,7 @@ export const pollinators = [
       'Common in forests, meadows, gardens, and parks',
       'Found throughout Maryland'
     ],
-    color: '#B8860B' // DarkGoldenrod
+    color: '#E8C15D' // LightGoldenrod
   },
   {
     title: 'Southern Yellowjacket',
@@ -189,6 +259,25 @@ export const pollinators = [
     color: '#4682B4' // SteelBlue
   },
   {
+    title: 'Cuckoo Bumble Bees',
+    subtitle: 'Subgenus Psithyrus',
+    identification: [
+      'Much bigger than other social bumble bees',
+      'Abdomen comes to more of a point',
+      'Pointier mandible and longer stinger',
+      'Most species are a lighter yellow to white color'
+    ],
+    flowers: ['Bumble bee nest', 'Parasite Species', 'Benefit Unknown'],
+    ecological: [
+      'Pollinates but not effective',
+      'Lays eggs in nest of other bumble bees',
+      'May use scent of host bee to access nest',
+      'Does not always kill host queen'
+    ],
+    habitat: ['Other bumble bee nests'],
+    color: '#D1B74D' // EarthYellow
+  },
+  {
     title: 'Honey Bee',
     subtitle: 'Apis mellifera (Non-native)',
     identification: [
@@ -215,6 +304,8 @@ export const pollinators = [
 export const pollinatorImages: Record<string, string> = {
   'Eastern Carpenter Bee':
     'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%3Fid%3DOIP.TbI60Wm7d8G3HWtHzmhDdAHaFw%26pid%3DApi&f=1&ipt=3c11205b41422e942aa09eb041aa720fb706f93b4248ad017e59fc0f589b0e55',
+  'Rusty-patched Bumble Bee':
+    'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.davidwolfe.com%2Fwp-content%2Fuploads%2F2017%2F01%2F4-1.jpg&f=1&nofb=1&ipt=4a93e8cec9eb34235476aa82f04f8ff915037ecb6e034c6636aae80d7678437a',
   'Squash Bee':
     'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ffacts.net%2Fwp-content%2Fuploads%2F2021%2F04%2FSquash-Bee.jpg&f=1&nofb=1&ipt=d8c72ea2fc4dc0f860cef735b866cba30c4057a52db22d23442e467bb80b4b75',
   'Mason Bee':
@@ -229,6 +320,8 @@ export const pollinatorImages: Record<string, string> = {
     'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fobjects.liquidweb.services%2Fimages%2F201811%2Fjesse_christopherson_45640080302_d863cf3bf4_b.jpg&f=1&nofb=1&ipt=053581c45d79feb9b92bd15e8e448929c1c31f755c5fb9b7be22e5b5e68242aa',
   'Bald-Faced Hornet':
     'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.statically.io%2Fimg%2Fi.pinimg.com%2Foriginals%2Fa0%2F42%2F32%2Fa042329702a33d3325334e2a05157ec4.jpg&f=1&nofb=1&ipt=f8f1b2956869c3067d1f1eda56b1f53289a6ffe7f89abe1ca40c02787bb8b405',
+  'Cuckoo Bumble Bees':
+    'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fmaps.biodiversityireland.ie%2FSpecies%2F55998%2FFour%2520Coloured%2520Cuckoo%2520Bee%2520(Bombus%2520(Psithyrus)%2520sylvestris)_2.jpg&f=1&nofb=1&ipt=257fb1cb933e86d697dcdbdd43734d4aa62d8cca10e060f9742cb279a2d9eac0',
   'Honey Bee':
     'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcarolinahoneybees.com%2Fwp-content%2Fuploads%2F2022%2F11%2Fvisual-looks-honey-bee.jpg&f=1&nofb=1&ipt=d2fba2c164ddc15b84444cef67b33e9ff8d20c888fc8f5f5097f7db294a32b0b'
 };
@@ -236,6 +329,8 @@ export const pollinatorImages: Record<string, string> = {
 export const flowerImages: Record<string, string> = {
   Tomatoes:
     'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fimg-aws.ehowcdn.com%2F877x500p%2Fphotos.demandstudios.com%2F25%2F135%2Ffotolia_3817158_XS.jpg&f=1&nofb=1&ipt=a17bac88d46f716439c062a7cc3c06eddb2505368b2278c3eaeb9accc40871dc',
+  'New Jersey tea':
+    'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.shopify.com%2Fs%2Ffiles%2F1%2F0739%2F9053%2Fproducts%2FNew-Jersey-Tea_1024x1024.jpg%3Fv%3D1478603346&f=1&nofb=1&ipt=fbd8e1ae244a1e98913a5976d6915c2663006404d0615437f8ccfbc96fa3d006',
   Pumpkins:
     'https://external-content.duckduckgo.com/iu/?u=http%3A%2F%2Fdiy.sndimg.com%2Fcontent%2Fdam%2Fimages%2Fdiy%2Ffullset%2F2005%2F5%2F25%2F2%2FFFTG107-_Step_17.jpg.rend.hgtvcom.1280.960.suffix%2F1454185087193.jpeg&f=1&nofb=1&ipt=9ccecbaebd0f08c0abcb533977400b42a38d8766cd98e983b6bb9ec164fe1f82',
   'Fruit trees':
@@ -250,6 +345,8 @@ export const flowerImages: Record<string, string> = {
     'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn.pixabay.com%2Fphoto%2F2022%2F01%2F14%2F19%2F58%2Fchicory-6938101_1280.jpg&f=1&nofb=1&ipt=f64d0f7dcc6c224bbb50b53b094114fe729d7b21b4e594aed2f7147c9307aac8',
   Blueberries:
     'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fdirectnativeplants.com%2Fwp-content%2Fuploads%2F2018%2F08%2Fblueberry2-1-768x576.jpg&f=1&nofb=1&ipt=860b2bc2e432bf9e07c58331acbc3a12c1ad6f1fad4e6c6cd441e7493282d9f5',
+  'Bumble bee nest':
+    'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.treehugger.com%2Fthmb%2FNrIwU71sPXGONjExndJ5R6k9itA%3D%2F3840x2160%2Ffilters%3Ano_upscale()%3Amax_bytes(150000)%3Astrip_icc()%2FGettyImages-916563540-891eb629a7e445b3b0ea559e529c47b5.jpg&f=1&nofb=1&ipt=ca5ed6430e8f00543c0d5fb55c0bb466ef7463663a6ab33390576490c27870b6',
   Clover:
     'https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fobjects.liquidweb.services%2Fimages%2F201906%2Fdavid_illig_47960396171_2b81da58f0_b.jpg&f=1&nofb=1&ipt=f5d0cf70c1ad8958255608fd6f6102e140a848eac1a40e3666608c15258e1db1'
 };
@@ -257,6 +354,7 @@ export const flowerImages: Record<string, string> = {
 export const getPollinatorInfoURL = (scientificName: string): string => {
   const infoURLs: Record<string, string> = {
     'Xylocopa virginica': 'https://www.inaturalist.org/taxa/51110-Xylocopa-virginica',
+    'Bombus affinis': 'https://www.inaturalist.org/taxa/121519-Bombus-affinis',
     'Vespula maculifrons': 'https://www.inaturalist.org/taxa/119994-Vespula-maculifrons',
     'Vespula squamosa': 'https://www.inaturalist.org/taxa/233560-Vespula-squamosa',
     'Dolichovespula maculata': 'https://www.inaturalist.org/taxa/52911-Dolichovespula-maculata',
@@ -264,6 +362,7 @@ export const getPollinatorInfoURL = (scientificName: string): string => {
     'Subgenus Peponapis': 'https://www.inaturalist.org/taxa/578138-Peponapis',
     'Genus Andrena': 'https://www.inaturalist.org/taxa/57669-Andrena',
     'Genus Osmia': 'https://www.inaturalist.org/taxa/57674-Osmia',
+    'Subgenus Psithyrus': 'https://www.inaturalist.org/taxa/538893-Psithyrus',
     'Apis mellifera (Non-native)': 'https://www.inaturalist.org/taxa/47219-Apis-mellifera'
   };
 
